@@ -1,0 +1,994 @@
+@font-face {
+    /* Fuente */
+    font-family: 'Euclid Circular A Regular';
+    /* Ruta del archivo fuente */
+    src: url('../Fonts/Euclid\ Circular\ A\ Regular.otf') format('truetype');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Euclid Circular A Regular';
+}
+
+/* Estilos y diseño de Scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5%;
+}
+
+nav {
+    background-color: #3E00A4;
+    color: white;
+    margin-bottom: 0;
+}
+
+.navbar-nav{
+    gap: 35px;
+    justify-content: center;
+}
+
+.btn-custom {
+    background-color: #C03884;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #A0306A;
+}
+
+.estilo-hr{
+    border-color: white;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Oculta el toggler de Dispositivos y prioriza el boton de Aula Virtual */
+    .navbar-toggler{
+        display: none;
+    }
+
+    .btn-custom{
+        font-size: 14px;
+        padding: 9px 15px;
+    }
+}
+
+.inicio {
+    font-size: 20px;
+    padding-top: 0;
+}
+
+.Lg-kids {
+    margin-left: 15px;
+    max-width: 7rem;
+}
+
+.tx-pform{
+    color: #ccc;
+    font-size: 12px;
+    margin: -10px;
+}
+
+.bg-img {
+    background: url(../Img/Bg-kids.png) no-repeat;
+    background-size: cover;
+    height: 88vh;
+    background-position: center;
+    position: relative;
+}
+
+.img-nino {
+    mask-image: linear-gradient(black 95%, transparent);
+    margin-top: 30px;
+    max-width: 78%;
+    float: left;
+}
+
+.txt-1 {
+    font-weight: bold;
+    margin-top: 2.5rem;
+    font-size: 28px;
+    text-align: left;
+}
+
+#txt-2 {
+    margin-top: 10px;
+    font-weight: initial;
+    font-size: 16px;
+    text-align: left;
+}
+
+span {
+    font-weight: bold;
+    color: #C03884;
+}
+
+/* Estilos de Formulario */
+.form-container {
+    background-color: rgb(60, 4, 151);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    position: auto;
+}
+
+form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.apellidoForm {
+    margin-top: 10px;
+}
+
+.form-group label {
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"], 
+.form-group input[type="tel"], 
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus, 
+.form-group input[type="tel"]:focus, 
+.form-group input[type="email"]:focus {
+    border-color: #C03884;
+}
+
+.contact-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contact-options label {
+    font-size: 14px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.contact-options input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.btn-datos button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #C03884;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-datos button:hover {
+    background-color: #A0306A;
+}
+
+/*botón con efecto*/
+.btn-conv {
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: #C03884;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    
+  }
+  
+  .btn-conv:hover {
+    transform: scale(1.05);
+    border-color: #A0306A;
+  }
+  
+  .btn-conv:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .btn-conv::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+    60% {
+      left: 100%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .img-nino {
+        display: none;
+    }
+
+    #backToTop{
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    .img-nino {
+        mask-image: linear-gradient(black 95%, transparent);
+        max-width: 90%;
+    }
+}
+
+/*Seccion de Niveles */
+.Niveles{
+    background-color: #F9F9F9;
+}
+
+/* SECCION 2 - NIVELES DE APRENDIZAJE */
+.txt-aprend{
+    margin-left: 20px;
+    margin-top: 60px;
+    font-size: 25px;
+}
+
+/* Estilos de cada Card */
+.cont1, .cont2, .cont3 {
+    margin: 20px;
+    padding: 29px;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Espacios entre cards - Responsive */
+.col-md-4, .col-sm-12 {
+    margin-bottom: 50px;
+}
+
+.espas{
+    margin-bottom: 60px;
+}
+
+.grid1{
+    height: 60px;
+    width: 60px;
+    border-radius: 13px;
+    background-color: #0D00A0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid2{
+    height: 60px;
+    width: 60px;
+    border-radius: 13px;
+    background-color: #2C9407;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid3{
+    height: 60px;
+    width: 60px;
+    border-radius: 13px;
+    background-color: #FF5C00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Textos de cada card */
+.txt-preescolar h1{
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #0D00A0;
+}
+
+.txt-preescolar p{
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.txt-primaria h1{
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #2C9407;
+}
+
+.txt-primaria p{
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.txt-secundaria h1{
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FF5C00;
+}
+
+.txt-secundaria p{
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.txt-materiales {
+    margin-top: 50px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+    font-size: 28px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    
+    .col-md-4, .col-sm-12 {
+        margin-bottom: 30px;
+    }
+
+    .txt-aprend{
+        font-size: 23px;
+        margin-top: 5rem;
+    }
+
+    .icon-niv{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.Materiales{
+    background-color: #e5e5e594;
+}
+
+/* Estilos de cada Card */
+.cont1-material, .cont2-material, .cont3-material, .cont4-material, .cont5-material {
+    margin: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Textos de cada card */
+.txt-material h1{
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.txt-material p{
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* Estilo general de la sección */
+.Visitanos {
+    height: 34rem;
+    background-color: #3E00A4;
+}
+
+/* Texto principal */
+.txt-Visitanos h1 {
+    margin-top: 50px;
+    font-size: 25px;
+    color: white;
+}
+
+.txt-Visitanos p {
+    font-weight: initial;
+    font-size: 14px;
+    color: white;
+}
+
+/* Estilos de cada Card */
+.cont1-Visit, .cont2-Visit, .cont3-Visit {
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos de cada Grid */
+.grid1-Visit, .grid2-Visit, .grid3-Visit {
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.txt-Visit h1 {
+    margin-top: 40px;
+    font-size: 18px;
+    color: white;
+}
+
+.txt-Visit p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.txt-Visit a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Oculta las secciones de Google Meet y Google Teams */
+    
+    .txt-materiales{
+        margin-bottom: 5px;
+    }
+
+    .Visitanos{
+        height: auto;
+    }    
+}
+
+/* Estilo general de la sección */
+.Cursos {
+    padding: 20px;
+}
+
+.txt-cursos {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de imagen y texto */
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-c1 {
+    height: 290px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.img-c2 {
+    height: 290px;
+    width: 310px;
+    border-radius: 50%;
+}
+
+.ingles-preescolar, .ingles-Primaria, .ingles-Secundaria {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.txt-inglesp, .txt-inglesP, .txt-inglesS {
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.txt-herramientas {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.txt-generales p {
+    text-align: left;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .ingles-preescolar, .ingles-Primaria, .ingles-Secundaria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    .img-c1 {
+        height: 250px;
+        width: 250px;
+    }
+
+    .txt-inglesp, .txt-inglesP, .txt-inglesS {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .txt-herramientas {
+        font-size: 16px;
+    }
+
+    .txt-generales p {
+        font-size: 14px;
+    }
+}
+
+.txt-inglesp{
+    color: #0D00A0;
+}
+
+.txt-inglesP{
+    color: #2C9407;
+}
+
+.txt-inglesS{
+    color: #FF5C00;
+}
+
+/* Beneficios de aprendiza presencial */
+.cont-beneficios {
+    height: auto;
+    background-color: #3E00A4;
+    padding: 40px;
+}
+
+.txt-beneficios {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+/* Estilos de cada Card */
+.cont1-beneficios, .cont2-beneficios, .cont3-beneficios {
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F0F0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid1-beneficios, .grid2-beneficios, .grid3-beneficios {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-meeting, .txt-control, .txt-plataforma {
+    font-size: 18px;
+}
+
+.txt-met, .txt-cont, .txt-plat {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .txt-beneficios {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    .txt-meeting, .txt-control, .txt-plataforma {
+        font-size: 18px;
+    }
+
+    .txt-met, .txt-cont, .txt-plat {
+        font-size: 12px;
+    }
+
+    .cont-beneficios {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        margin-bottom: 20px;
+    }
+}
+
+/* Nosotros */
+.cont-nosotros {
+    height: auto;
+    background-color: #F0F0F0;
+    padding: 20px;
+}
+
+.txt-nosotros {
+    margin-bottom: 40px;
+    margin-top: 35px;
+    font-size: 25px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.txt-Qs {
+    margin-top: 35px;
+    font-size: 25px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.txt-nos {
+    font-size: 15px;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.icon-browser {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Estilos de cada Card */
+.cont1-nosotros {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+}
+
+.img-container-nos {
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    margin-bottom: 50px;
+}  
+
+.img-nosotros {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.btn-masinfo{
+    margin-bottom: 20px;
+}
+
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .img-container-nos {
+        display: none;
+    }
+
+    .cont-nosotros {
+        padding: 10px;
+    }
+
+    .txt-nosotros {
+        font-size: 20px;
+    }
+
+    .txt-nos {
+        font-size: 14px;
+    }
+
+    .txt-Qs{
+        margin-bottom: 30px;
+    }
+
+    .cont1-nosotros{
+        margin-top: -20px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #3E00A4;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Logo EuroKids */
+.img-footer {
+    max-width: 7rem;
+    margin-top: 30px;
+}
+
+/* Dirección */
+.icon-map {
+    width: 45px;
+    height: 45px;
+}
+
+.txt-visita {
+    margin-top: 35px;
+    font-size: 18px;
+}
+
+.txt-Telefono {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.txt-Telefono-p{
+    margin-top: 100;
+}
+
+.Whatsapp img{
+    margin-right: 5px;
+}
+
+.Whatsapp{
+    text-decoration: none;
+    color: white;
+}
+
+/* Redes Sociales */
+.txt-redesS {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.iconos {
+    margin-top: 20px;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.direcciones {
+    text-decoration: none;
+    margin-top: 20px;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.direcciones a {
+    color: white;
+    text-decoration: none;
+}
+
+.direcciones a:hover {
+    color: rgb(201, 201, 201);
+    transition: 0.2s;
+}
+
+/* Privacidad */
+.btn-privacidad{
+    margin-top: 30px;
+    background-color:transparent !important;
+    border: none !important;
+}
+
+.modal-body{
+    max-height: 25rem;
+    overflow-y: auto;
+}
+
+.modal-title{
+    color: #3E00A4;
+}
+
+.txt-info{
+    font-size: 13px;
+    color: black;
+}
+
+.txt-derechos h3 {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.655);
+    font-size: 15px;
+}
+
+.txt-priva{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+/* Diseño para pantallas móviles */
+@media (max-width: 768px) {
+    .container.text-center {
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .img-footer {
+        margin-bottom: 0px;
+        max-width: 6rem;
+    }
+
+    .iconos {
+        margin-bottom: 0px;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .direcciones {
+        display: none;
+    }
+
+    .txt-Telefono{
+        margin-bottom: 15px;
+    }
+
+    .txt-visita{
+        margin-top: 10px;
+    }
+
+    .txt-redesS{
+        margin-top: 10px;
+    }
+
+    .btn-privacidad{
+        margin-top: 10px;
+    }
+
+    .btn-masinfo{
+        margin-bottom: 50px;
+    }
+
+    .txt-privacidad h3, .txt-derechos h3{
+        margin-top: 2px;
+    }
+
+    .txt-derechos h3{
+       font-size: 12px 
+    }
+
+    .modal-body{
+        max-height: 600px;
+        overflow-y: auto;
+    }
+
+    .txt-priva{
+        color: black;
+        font-size: 20px;
+    }
+}
+
+/* Estilos para el botón "Back to Top" */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #00A6ED;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #00A6ED;
+}
+
+/* Estilos de flotantes */
+.float{
+    position:fixed;
+    width:52.5px;
+    height:52.5px;
+    bottom:80px;
+    right:15px;
+    background-color:#ffffff;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  
+  .float2{
+    position:fixed;
+    width:53px;
+    height:51px;
+    bottom:145px;
+    right:15px;
+    background-color:#ffffff;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+
+  /* Media queries */
+@media screen and (max-width: 768px) {
+    .float{
+        bottom:30px;
+    }
+
+    .float2{
+        bottom:90px;
+    }
+}
+
